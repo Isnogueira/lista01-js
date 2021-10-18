@@ -12,35 +12,29 @@ let ladoA = parseInt(lados[0])
 let ladoB = parseInt(lados[1])
 let ladoC = parseInt(lados[2])
 
-if ((ladoA + ladoB) > ladoC || (ladoC + ladoB) > ladoA || (ladoA + ladoC) > ladoB) {
+
+if ((ladoA + ladoB) < ladoC && (ladoC + ladoB) < ladoA && (ladoA + ladoC) < ladoB) {
   
-  resp = "É um triângulo "
+  resp = "Não é um triângulo "
 
 }
 
-// MELHORAR A LÓGICA
+if(ladoA != ladoB != ladoC){
+  
+  resp += "Triangulo escaleno."
+  console.log(resp)
 
-if (resp == "É um triângulo "){
+} else if (ladoA == ladoB == ladoC){
+  
+  resp += "Triangulo equilátero."
+  console.log(resp)
 
-  if(ladoA != ladoB  && ladoB != ladoC && ladoC != ladoA){
-    
-    resp += "Escaleno."
-    console.log(resp)
+} else {
 
-  } else if (ladoA == ladoB == ladoC){
-   
-    resp += "Equilátero."
-    console.log(resp)
-
-  } else {
-
-    resp += "Isósceles."
-    console.log(resp)
-  }
-
-} else{
-
-  resp = "Não é um triângulo! "
-
+  resp += "Triangulo isósceles."
+  console.log(resp)
 }
 
+
+
+// 5 3 4
